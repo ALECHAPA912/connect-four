@@ -1,7 +1,7 @@
 require_relative 'miscellaneous.rb'
 
 class Game
-
+  
   include Miscellaneous
 
   def initialize
@@ -49,7 +49,7 @@ class Game
     row = next_empty_row(column)
     @board[column][row] = current_player
   end
-  
+
   def verify_input(input)
     if !input.match?(/\A[1-7]\z/)
       puts "\nIncorrect input player #{@players[@current_player]}, insert a valid input! (1-7)"
